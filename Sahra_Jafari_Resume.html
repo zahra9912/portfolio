@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sahra Jafari — Résumé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=IBM+Plex+Sans:wght@400;500;600&family=Vazirmatn:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F3EEE3;
+    --ink:#211E1B;
+    --ink-soft:#514C44;
+    --gold:#8C6A2E;
+    --line:#D9D0BC;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+  }
+  .page{
+    max-width:760px;
+    margin:0 auto;
+    padding:70px 40px 100px;
+  }
+
+  /* language toggle */
+  .toggle{
+    position:fixed;
+    top:28px;
+    right:32px;
+    display:flex;
+    border:1px solid var(--ink);
+    border-radius:20px;
+    overflow:hidden;
+    font-size:13px;
+    z-index:10;
+    background:var(--cream);
+  }
+  .toggle button{
+    border:none;
+    background:transparent;
+    padding:7px 18px;
+    cursor:pointer;
+    font-family:'IBM Plex Sans', sans-serif;
+    color:var(--ink);
+  }
+  .toggle button.active{
+    background:var(--ink);
+    color:var(--cream);
+  }
+  html[dir="rtl"] .toggle{ right:auto; left:32px; }
+  html[dir="rtl"] .toggle button{ font-family:'Vazirmatn', sans-serif; }
+
+  hr.hairline{border:none;border-top:1px solid var(--line);margin:36px 0;}
+
+  header h1{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-size:44px;
+    margin:0 0 6px;
+  }
+  header .role{
+    font-size:16px;
+    color:var(--ink-soft);
+    font-style:italic;
+    font-family:'Fraunces', serif;
+    margin:0 0 14px;
+  }
+  header .contact{
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+
+  h2.sec{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-style:italic;
+    font-size:15px;
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin:0 0 18px;
+  }
+
+  p.profile{
+    font-size:15px;
+    line-height:1.75;
+    color:var(--ink-soft);
+    margin:0;
+  }
+
+  .skill-line{
+    font-size:14px;
+    line-height:1.8;
+    margin:0 0 8px;
+    color:var(--ink-soft);
+  }
+  .skill-line b{color:var(--ink); font-weight:600;}
+
+  .job{margin:0 0 30px;}
+  .job:last-child{margin-bottom:0;}
+  .job-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:6px 16px;
+    margin:0 0 4px;
+  }
+  .job-title{
+    font-family:'Fraunces', serif;
+    font-size:19px;
+  }
+  .job-dates{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    font-style:italic;
+  }
+  .job ul{
+    margin:8px 0 0;
+    padding-left:20px;
+    font-size:14px;
+    line-height:1.7;
+    color:var(--ink-soft);
+  }
+  html[dir="rtl"] .job ul{padding-left:0; padding-right:20px;}
+  .job li{margin-bottom:4px;}
+
+  .edu-degree{font-family:'Fraunces', serif; font-size:18px; margin:0 0 4px;}
+  .edu-school{font-size:14px; color:var(--ink-soft); font-style:italic;}
+
+  html[dir="rtl"] body, html[dir="rtl"] .toggle button:not(.force-latin){
+    font-family:'Vazirmatn', sans-serif;
+  }
+  html[dir="rtl"] header h1, html[dir="rtl"] header .role,
+  html[dir="rtl"] h2.sec, html[dir="rtl"] .job-title, html[dir="rtl"] .job-dates,
+  html[dir="rtl"] .edu-degree, html[dir="rtl"] .edu-school, html[dir="rtl"] p.profile,
+  html[dir="rtl"] .skill-line, html[dir="rtl"] .job ul, html[dir="rtl"] header .contact{
+    font-family:'Vazirmatn', sans-serif;
+    font-style:normal;
+  }
+  html[dir="rtl"] .page{text-align:right;}
+  html[dir="rtl"] .job-head{flex-direction:row-reverse;}
+
+  .lang-block{display:none;}
+  .lang-block.active{display:block;}
+</style>
+</head>
+<body>
+
+<div class="toggle">
+  <button id="btnEN" class="active force-latin" onclick="setLang('en')">EN</button>
+  <button id="btnFA" class="force-latin" onclick="setLang('fa')">FA</button>
+</div>
+
+<!-- ENGLISH -->
+<div class="lang-block active" id="block-en">
+<div class="page">
+  <header>
+    <h1>Sahra Jafari</h1>
+    <p class="role">Junior UI/UX Designer | Content Creator &amp; Design Communicator</p>
+    <p class="contact">Tehran, Iran &nbsp;·&nbsp; +98 919 672 5373 &nbsp;·&nbsp; zahrajafari293@gmail.com</p>
+  </header>
+
+  <hr class="hairline">
+
+  <h2 class="sec">Profile</h2>
+  <p class="profile">Junior UI/UX Designer with two years of hands-on experience in digital content strategy, visual storytelling, and audience-focused design. Skilled in Figma, Adobe Creative Suite, and cross-functional collaboration, with a strong grasp of what makes content — and interfaces — clear, usable, and engaging. Currently deepening expertise in UI/UX design, wireframing, and prototyping, with a growing personal portfolio of app-design case studies.</p>
+
+  <hr class="hairline">
+
+  <h2 class="sec">Skills</h2>
+  <p class="skill-line"><b>Design Tools:</b> Figma (UI/UX Design, Wireframing, Prototyping), Adobe Photoshop, Adobe Illustrator, Adobe Premiere, After Effects</p>
+  <p class="skill-line"><b>Web &amp; Content:</b> WordPress, SEO Optimization, Content Strategy, Competitor Analysis</p>
+  <p class="skill-line"><b>Design Practice:</b> Visual hierarchy, accessible color &amp; type choices, user-focused content design, iterative feedback</p>
+  <p class="skill-line"><b>Soft Skills:</b> Problem Solving, Creativity &amp; Ideation, Critical Thinking, Team Leadership &amp; Collaboration</p>
+  <p class="skill-line"><b>Languages:</b> English — Fluent &nbsp;·&nbsp; Turkish (Istanbul dialect) — Conversational</p>
+
+  <hr class="hairline">
+
+  <h2 class="sec">Experience</h2>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">Scenario Writer &amp; Content Creator — Parcham Sefid</span><span class="job-dates">Apr 2025 – Present</span></div>
+    <ul>
+      <li>Write scripts and structure content for Ehsan Tarighat's YouTube channel, shaping narrative flow with the viewer's attention and comprehension in mind.</li>
+      <li>Produce written content for the Parcham Sefid podcast, translating spoken ideas into clear, structured formats.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">Content Strategist — Astria Copper</span><span class="job-dates">Jul 2025 – Dec 2025 (Remote / Freelance)</span></div>
+    <ul>
+      <li>Plan and maintain a content calendar, writing reel scripts and Instagram copy on a consistent schedule.</li>
+      <li>Balance creative concepts with practical production timelines across a remote freelance workflow.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">Translator &amp; Content Creator — Urbanism Institute</span><span class="job-dates">2023 – 2024</span></div>
+    <ul>
+      <li>Created video, image, and text content for Instagram, applying visual and messaging consistency across a content system.</li>
+      <li>Analyzed competitor content to identify gaps and opportunities, informing content and format decisions.</li>
+      <li>Translated and edited six English book chapters, requiring close attention to clarity and structure.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">Content Creator — Danamond</span><span class="job-dates">2021 – 2023</span></div>
+    <ul>
+      <li>Designed and managed video and post content for social media, from concept through to publishing.</li>
+      <li>Collaborated with cross-functional teams to align content with broader product and brand goals.</li>
+      <li>Produced content in video, image, and text formats, and translated educational English videos for a Persian-speaking audience.</li>
+      <li>Conducted competitor analysis to benchmark content quality and identify audience-engagement patterns.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">Translator — Iranital News Media</span><span class="job-dates">2020 – 2021</span></div>
+    <ul>
+      <li>Translated news and articles in cryptocurrency and blockchain, published directly to the website.</li>
+      <li>Managed on-page SEO for translated content to support search visibility.</li>
+    </ul>
+  </div>
+
+  <hr class="hairline">
+
+  <h2 class="sec">Education</h2>
+  <p class="edu-degree">Bachelor of Urban Planning</p>
+  <p class="edu-school">Semnan University · 2018 – 2022</p>
+</div>
+</div>
+
+<!-- PERSIAN -->
+<div class="lang-block" id="block-fa" dir="rtl">
+<div class="page">
+  <header>
+    <h1>صحرا جعفری</h1>
+    <p class="role">طراح جونیور UI/UX | تولیدکننده محتوا</p>
+    <p class="contact">سوهانک، تهران، ایران &nbsp;·&nbsp; ۰۹۱۹۶۷۲۵۳۷۳ &nbsp;·&nbsp; zahrajafari293@gmail.com</p>
+  </header>
+
+  <hr class="hairline">
+
+  <h2 class="sec">درباره من</h2>
+  <p class="profile">طراح جونیور UI/UX با دو سال تجربه‌ی عملی در استراتژی محتوا، روایت‌گری بصری و طراحی مبتنی بر مخاطب. مسلط به فیگما، مجموعه‌ی ادوبی، و همکاری بین‌تیمی، با درک درستی از این‌که چه چیزی محتوا -و رابط کاربری- را واضح، کاربردی و جذاب می‌کند. در حال حاضر دانش خودم را در زمینه‌ی طراحی UI/UX، وایرفریمینگ و پروتوتایپینگ عمیق‌تر می‌کنم و پورتفولیوی شخصی‌ام از کیس‌استادی‌های طراحی اپلیکیشن در حال رشد است.</p>
+
+  <hr class="hairline">
+
+  <h2 class="sec">مهارت‌ها</h2>
+  <p class="skill-line"><b>ابزارهای طراحی:</b> فیگما (طراحی UI/UX، وایرفریم، پروتوتایپ)، ادوبی فتوشاپ، ایلاستریتور، پریمیر، افترافکتس</p>
+  <p class="skill-line"><b>وب و محتوا:</b> وردپرس، بهینه‌سازی سئو، استراتژی محتوا، تحلیل رقبا</p>
+  <p class="skill-line"><b>عملکرد طراحی:</b> سلسله‌مراتب بصری، انتخاب رنگ و تایپوگرافی قابل‌دسترس، طراحی محتوا با محوریت کاربر، بازخورد تکرارشونده</p>
+  <p class="skill-line"><b>مهارت‌های نرم:</b> حل مسئله، خلاقیت و ایده‌پردازی، تفکر انتقادی، رهبری و مدیریت تیم</p>
+  <p class="skill-line"><b>زبان‌ها:</b> انگلیسی — کاملاً مسلط &nbsp;·&nbsp; ترکی استانبولی — خوب</p>
+
+  <hr class="hairline">
+
+  <h2 class="sec">سوابق کاری</h2>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">سناریونویس و تولیدکننده محتوا — پرچم سفید</span><span class="job-dates">اردیبهشت ۱۴۰۴ – تاکنون</span></div>
+    <ul>
+      <li>نگارش سناریو و ساختاردهی محتوا برای یوتیوب احسان طریقت، با تمرکز بر جریان روایت متناسب با توجه و درک مخاطب.</li>
+      <li>تولید محتوای نوشتاری برای پادکست پرچم سفید و تبدیل ایده‌های گفتاری به فرمت‌های شفاف و ساختاریافته.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">استراتژیست محتوا — مس آستریا</span><span class="job-dates">تیر ۱۴۰۴ – دی ۱۴۰۴ (فریلنس/ریموت)</span></div>
+    <ul>
+      <li>برنامه‌ریزی و نگهداری تقویم محتوایی، نگارش سناریوی ریلز و متن اینستاگرام به‌صورت مستمر.</li>
+      <li>ایجاد تعادل بین ایده‌های خلاقانه و زمان‌بندی واقعی تولید در یک فرآیند فریلنس ریموت.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">مترجم و تولیدکننده محتوا — مدرسه تکنولوژی شهرسازی</span><span class="job-dates">۱۴۰۲ – ۱۴۰۳</span></div>
+    <ul>
+      <li>تولید محتوای ویدیویی، تصویری و متنی برای اینستاگرام با رعایت هماهنگی بصری و پیامی در طول یک سیستم محتوایی.</li>
+      <li>تحلیل محتوای رقبا برای شناسایی فرصت‌ها و نقاط ضعف، و استفاده از آن در تصمیم‌گیری فرمت و محتوا.</li>
+      <li>ترجمه و ویراستاری شش فصل از یک کتاب انگلیسی با تمرکز بالا بر وضوح و ساختار متن.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">تولیدکننده محتوا — داناموند</span><span class="job-dates">۱۴۰۲ – ۱۴۰۳</span></div>
+    <ul>
+      <li>طراحی و مدیریت محتوای ویدیویی و پستی برای شبکه‌های اجتماعی، از ایده تا انتشار.</li>
+      <li>همکاری با تیم‌های مختلف برای هماهنگ‌سازی محتوا با اهداف کلی محصول و برند.</li>
+      <li>تولید محتوا در قالب ویدیو، تصویر و متن، و ترجمه‌ی ویدیوهای آموزشی انگلیسی برای مخاطب فارسی‌زبان.</li>
+      <li>انجام تحلیل رقبا برای محک‌زدن کیفیت محتوا و شناسایی الگوهای تعامل مخاطب.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">مترجم — رسانه خبری ایرانیتال</span><span class="job-dates">۱۳۹۹ – ۱۴۰۰</span></div>
+    <ul>
+      <li>ترجمه‌ی اخبار و مقالات حوزه‌ی ارزهای دیجیتال و بلاک‌چین برای انتشار مستقیم در وب‌سایت.</li>
+      <li>مدیریت سئوی صفحه برای محتوای ترجمه‌شده جهت افزایش دیده‌شدن در نتایج جست‌وجو.</li>
+    </ul>
+  </div>
+
+  <hr class="hairline">
+
+  <h2 class="sec">تحصیلات</h2>
+  <p class="edu-degree">کارشناسی شهرسازی</p>
+  <p class="edu-school">دانشگاه سراسری سمنان · ۱۳۹۷ – ۱۴۰۲</p>
+</div>
+</div>
+
+<script>
+function setLang(lang){
+  const html = document.getElementById('htmlRoot');
+  const en = document.getElementById('block-en');
+  const fa = document.getElementById('block-fa');
+  const btnEN = document.getElementById('btnEN');
+  const btnFA = document.getElementById('btnFA');
+  if(lang === 'en'){
+    html.setAttribute('lang','en'); html.setAttribute('dir','ltr');
+    en.classList.add('active'); fa.classList.remove('active');
+    btnEN.classList.add('active'); btnFA.classList.remove('active');
+  } else {
+    html.setAttribute('lang','fa'); html.setAttribute('dir','rtl');
+    fa.classList.add('active'); en.classList.remove('active');
+    btnFA.classList.add('active'); btnEN.classList.remove('active');
+  }
+}
+</script>
+
+</body>
+</html>
